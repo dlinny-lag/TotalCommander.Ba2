@@ -20,7 +20,9 @@
       <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0-rc.2.23479.6" />
       <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="8.0.0-rc.2.23479.6" />
       <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0-rc.2.23479.6" />
-      <PackageReference Include="Sharp.BSA.BA2" Version="1.18.4-beta" />
     </ItemGroup>
-    
+
+    <ItemGroup>
+      <ProjectReference Include="..\BSA_Browser\Sharp.BSA.BA2\Sharp.BSA.BA2.csproj" />
+    </ItemGroup>    
 </Project>

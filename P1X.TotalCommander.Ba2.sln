@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P1X.TotalCommander.Ba2", "P1X.TotalCommander.Ba2\P1X.TotalCommander.Ba2.csproj", "{E2C247DB-FAF8-4314-8112-1242E0D721DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharp.BSA.BA2", "BSA_Browser\Sharp.BSA.BA2\Sharp.BSA.BA2.csproj", "{10BE7C17-E506-AF59-4A0F-9A68455E350A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E2C247DB-FAF8-4314-8112-1242E0D721DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2C247DB-FAF8-4314-8112-1242E0D721DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2C247DB-FAF8-4314-8112-1242E0D721DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BE7C17-E506-AF59-4A0F-9A68455E350A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BE7C17-E506-AF59-4A0F-9A68455E350A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BE7C17-E506-AF59-4A0F-9A68455E350A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BE7C17-E506-AF59-4A0F-9A68455E350A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,3 @@
+[submodule "BSA_Browser"]
+	path = BSA_Browser
+	url = https://github.com/dlinny-lag/BSA_Browser
