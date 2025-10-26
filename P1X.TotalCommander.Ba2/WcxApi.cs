@@ -314,4 +314,26 @@ public static class WcxApi
 	    var logName = configurationRoot["TotalCommander.Ba2:LogName"];
 	    return (logLevel, logName);
     }
+
+    /// <summary>
+    /// GetPackerCaps tells Totalcmd what features your packer plugin supports.
+    /// Omitting PK_CAPS_NEW and PK_CAPS_MODIFY means PackFiles will never be called and so you don't have to implement PackFiles. 
+    /// Omitting PK_CAPS_MULTIPLE means PackFiles will be supplied with just one file. 
+    /// Leaving out PK_CAPS_DELETE means DeleteFiles will never be called; 
+    /// leaving out PK_CAPS_OPTIONS means ConfigurePacker will not be called. 
+    /// PK_CAPS_MEMPACK enables the functions StartMemPack, PackToMem and DoneMemPack. 
+    /// If PK_CAPS_BY_CONTENT is returned, Totalcmd calls the function CanYouHandleThisFile when the user presses Ctrl+PageDown on an unknown archive type. 
+    /// Finally, if PK_CAPS_SEARCHTEXT is returned, Total Commander will search for text inside files packed with this plugin. This may not be a good idea for certain plugins like the diskdir plugin, where file contents may not be available. 
+    /// If PK_CAPS_HIDE is set, the plugin will not show the file type as a packer. 
+    /// This is useful for plugins which are mainly used for creating files, e.g. to create batch files, avi files etc. 
+    /// The file needs to be opened with Ctrl+PgDn in this case, because Enter will launch the associated application.
+    /// Important note:
+    /// If you change the return values of this function, e.g. add packing support, you need to reinstall the packer plugin in Total Commander, otherwise it will not detect the new capabilities.
+    /// </summary>
+    /// <returns></returns>
+    [UnmanagedCallersOnly(EntryPoint = "GetPackerCaps", CallConvs = new[] { typeof(CallConvStdcall) })]
+    public static unsafe int GetPackerCaps()
+    {
+        return WcxHead.PK_CAPS_SEARCHTEXT;
+    }
 }
